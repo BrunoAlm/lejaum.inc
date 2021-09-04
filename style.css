@@ -33,25 +33,31 @@
      color: #fafafa;
  }
 
+ @media (min-width: 992px) {
+     .navbar-expand-lg .navbar-nav .nav-link {
+         padding-top: 0;
+         padding-bottom: 0;
+         padding-right: 1rem;
+         padding-left: 1rem;
+     }
+ }
+
  li .nav-link {
      font-family: Georama;
-     font-style: normal;
      font-weight: 500;
      font-size: 25px;
 
-     color: #fafafa;
-     display: flex;
-     width: 137px;
-     border: 2px solid #fafafa;
+     color: #E5E5E5;
+
+     border: 3px solid #E5E5E5;
      border-radius: 50px;
-     justify-content: center;
  }
 
  li .nav-link:hover {
      color: #FF5400;
      text-decoration: none;
      background-color: #FFFFFF;
-     border: 2px solid #fafafa;
+     border: 3px solid #fafafa;
      border-radius: 50px;
  }
 
