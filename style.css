@@ -1,6 +1,6 @@
  @font-face {
      font-family: Georama;
-     src: url(fonts\Georama\Georama-Regular.ttf);
+     src: url(fonts/Georama/Georama-Regular.ttf);
  }
 
  .navbar {
@@ -61,6 +61,20 @@
      border-radius: 50px;
  }
 
+ .nav-link:focus {
+     color: white;
+ }
+
  .nav-item {
      margin-left: 47px;
+ }
+
+ .navbar-toggler {
+     font-family: Georama;
+     font-weight: 500;
+     font-size: 25px;
+
+     color: #E5E5E5;
+
+     border-radius: 50px;
  }
