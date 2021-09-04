@@ -34,9 +34,13 @@
  }
 
  li .nav-link {
+     font-family: Georama;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 25px;
+
      color: #fafafa;
      display: flex;
-     font-size: 25px;
      width: 137px;
      border: 2px solid #fafafa;
      border-radius: 50px;
