@@ -155,7 +155,7 @@
 
  .foguete {
      position: sticky;
-     margin-left: -200px;
+     margin-left: 0px;
      margin-top: 500px;
      height: 600px;
  }
@@ -198,7 +198,7 @@
  }
 
  .sobe {
-     animation: sobe-de-lado 0.2s linear infinite;
+     animation: sobe-de-lado 0.4s linear infinite;
      animation-play-state: paused;
      animation-delay: calc(var(--scroll) * -1s);
 
@@ -208,12 +208,12 @@
 
  @keyframes sobe-de-lado {
      to {
-         transform: translate(100%, -400px);
+         transform: translate(100%, -1200px);
      }
  }
 
  @keyframes rotate {
      to {
-         transform: rotate(-35deg);
+         transform: rotate(-45deg);
      }
  }
