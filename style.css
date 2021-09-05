@@ -5,6 +5,14 @@
      src: url(fonts/Georama/Georama-Italic.ttf);
  }
 
+ .noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+  
  body {
      background-color: #2C394B;
      background-image: url(images/backgroundlejaum.png);
