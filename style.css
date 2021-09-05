@@ -5,6 +5,22 @@
      src: url(fonts/Georama/Georama-Italic.ttf);
  }
 
+
+ /* CORES NO MODO CLARO */
+ :root {
+     --body-bg: #2C394B;
+     --nav-bg: #FF5400;
+     --nav-text-color:#E5E5E5;
+     --text-color: #E5E5E5;
+     --nav-hover: #FF5400;
+ }
+
+ /* CORES NO MODO ESCURO */
+ .dark-mode:root {
+     --body-bg: #E5E5E5;
+     --text-color: #2C394B;
+ }
+
  .noselect {
      -webkit-user-select: none;
      -khtml-user-select: none;
@@ -14,28 +30,28 @@
  }
 
  body {
-     background-color: #2C394B;
+     background-color: var(--body-bg);
      background-image: url(images/backgroundlejaum.png);
      height: 1500px;
      background-position: top;
      background-repeat: no-repeat;
      background-size: contain;
-     position: relative;
  }
 
  .navbar {
-     position: fixed;
+     position: sticky;
+     z-index: 10000;
      width: 100%;
      height: 70px;
      left: 0px;
      top: 0px;
 
-     background: #FF5400;
-     box-shadow: 0px 2px 35px #FF5400;
+     background: var(--nav-bg);
+     box-shadow: 0px 2px 35px var(--nav-bg);
  }
 
  .navbar-brand {
-     color: #E5E5E5;
+     color: var(--nav-text-color);
      width: 172px;
      left: 179px;
 
@@ -49,7 +65,7 @@
  }
 
  a:hover {
-     color: #fafafa;
+     color: var(--nav-text-color);
  }
 
 
@@ -68,22 +84,22 @@
      font-weight: 500;
      font-size: 20px;
 
-     color: #E5E5E5;
+     color: var(--nav-text-color);
 
-     border: 3px solid #E5E5E5;
+     border: 3px solid var(--nav-text-color);
      border-radius: 50px;
  }
 
  li .nav-link:hover {
-     color: #FF5400;
+     color: var(--nav-hover);
      text-decoration: none;
-     background-color: #FFFFFF;
-     border: 3px solid #fafafa;
+     background-color: var(--nav-text-color);
+     border: 3px solid var(--nav-text-color);
      border-radius: 50px;
  }
 
  .nav-link:focus {
-     color: white;
+     color: var(--text-color);
  }
 
  .nav-link:active {
@@ -100,7 +116,7 @@
      font-weight: 500;
      font-size: 25px;
 
-     color: #E5E5E5;
+     color: var(--text-color);
 
      border-radius: 50px;
  }
@@ -110,14 +126,23 @@
  }
 
  .comeco .titulo {
-     color: #FF5400;
+     color: var(--nav-bg);
+     font-family: Georama;
+     font-weight: 500;
+     font-size: 55px;
+     text-decoration: line-through;
+ }
+
+ .comeco .titulo2 {
+     margin-top: -30px;
+     color: var(--nav-bg);
      font-family: Georama;
      font-weight: 900;
      font-size: 55px;
  }
 
  .comeco .subtitulo {
-     color: #FAFAFA;
+     color: var(--text-color);
 
      margin-top: 20px;
 
@@ -128,41 +153,67 @@
      letter-spacing: 1px;
  }
 
- #foguete {
-     margin-top: 150px;
+ .foguete {
+     position: sticky;
+     margin-left: -200px;
+     margin-top: 500px;
      height: 600px;
  }
 
- #foguete:active {
+ .foguete:active {
      position: relative;
      top: 4px;
  }
 
- .botao-saiba-mais {
+ .btn-saibamais {
      margin-top: 30px;
-     display: inline-block;
-     box-shadow: 0px 2px 35px 0px #ff5500;
-     background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
-     background-color: #ff5500;
+     box-shadow: 0px 2px 35px 0px var(--nav-bg);
+     background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
+     background-color: var(--nav-bg);
      border-radius: 42px;
+     border: 0;
 
      cursor: pointer;
+ }
 
-     color: #ffffff;
+ .btn-saibamais {
+     color: var(--nav-text-color);
      font-family: Georama;
      font-style: normal;
      font-weight: normal;
-     font-size: 22px;
+     font-size: 25px;
      padding: 9px 23px;
      text-decoration: none;
  }
 
- .botao-saiba-mais:hover {
-     background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
-     background-color: #ff5500;
+
+ /* TESTE DE ANIMAÇÃO COM SCROLL DO FOGUETE */
+ .gira {
+     animation: rotate 0.5s linear infinite;
+     animation-play-state: paused;
+     animation-delay: calc(var(--scroll) * -1s);
+
+     animation-iteration-count: 1;
+     animation-fill-mode: both;
  }
 
- .botao-saiba-mais:active {
-     position: relative;
-     top: 1px;
+ .sobe {
+     animation: sobe-de-lado 0.2s linear infinite;
+     animation-play-state: paused;
+     animation-delay: calc(var(--scroll) * -1s);
+
+     animation-iteration-count: 1;
+     animation-fill-mode: both;
+ }
+
+ @keyframes sobe-de-lado {
+     to {
+         transform: translate(100%, -400px);
+     }
+ }
+
+ @keyframes rotate {
+     to {
+         transform: rotate(-35deg);
+     }
  }
