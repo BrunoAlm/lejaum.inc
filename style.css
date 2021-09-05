@@ -1,17 +1,29 @@
  @font-face {
      font-family: Georama;
      src: url(fonts/Georama/Georama-Regular.ttf);
+     font-family: Georama-Italico;
+     src: url(fonts/Georama/Georama-Italic.ttf);
+ }
+
+ body {
+     background-color: #2C394B;
+     background-image: url(images/backgroundlejaum.png);
+     height: 800px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
  }
 
  .navbar {
-     position: absolute;
+     position: fixed;
      width: 100%;
      height: 70px;
      left: 0px;
      top: 0px;
 
      background: #FF5400;
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     box-shadow: 0px 2px 35px #FF5400;
  }
 
  .navbar-brand {
@@ -20,9 +32,8 @@
      left: 179px;
 
 
-     font-family: Georama;
+     font-family: Georama-Italico;
      font-size: 40px;
-     font-style: italic;
      font-weight: 500;
      line-height: 48px;
 
@@ -77,4 +88,59 @@
      color: #E5E5E5;
 
      border-radius: 50px;
+ }
+
+ .container .comeco {
+     margin-top: 150px;
+ }
+
+ .comeco .titulo {
+     color: #FF5400;
+     font-family: Georama;
+     font-weight: 900;
+     font-size: 55px;
+ }
+
+ .comeco .subtitulo {
+     color: #FAFAFA;
+
+     margin-top: 43px;
+
+     font-family: Georama;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 27.5px;
+ }
+
+ #foguete {
+     margin-top: 150px;
+     margin-left: 60px;
+     height: 600px;
+ }
+
+ .botao-saibaMais {
+     display: inline-block;
+     box-shadow: 0px 2px 35px 0px #ff5500;
+     background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
+     background-color: #ff5500;
+     border-radius: 42px;
+
+     cursor: pointer;
+
+     color: #ffffff;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 22px;
+     padding: 9px 23px;
+     text-decoration: none;
+ }
+
+ .botao-saibaMais:hover {
+     background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
+     background-color: #ff5500;
+ }
+
+ .botao-saibaMais:active {
+     position: relative;
+     top: 1px;
  }
