@@ -16,10 +16,10 @@
  body {
      background-color: #2C394B;
      background-image: url(images/backgroundlejaum.png);
-     height: 800px;
-     background-position: center;
+     height: 1500px;
+     background-position: top;
      background-repeat: no-repeat;
-     background-size: cover;
+     background-size: contain;
      position: relative;
  }
 
