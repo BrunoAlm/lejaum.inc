@@ -6,13 +6,13 @@
  }
 
  .noselect {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-  
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+ }
+
  body {
      background-color: #2C394B;
      background-image: url(images/backgroundlejaum.png);
@@ -52,6 +52,8 @@
      color: #fafafa;
  }
 
+
+
  @media (min-width: 992px) {
      .navbar-expand-lg .navbar-nav .nav-link {
          padding-top: 0;
@@ -84,6 +86,11 @@
      color: white;
  }
 
+ .nav-link:active {
+     position: relative;
+     top: 1px;
+ }
+
  .nav-item {
      margin-left: 47px;
  }
@@ -112,7 +119,7 @@
  .comeco .subtitulo {
      color: #FAFAFA;
 
-     margin-top: 43px;
+     margin-top: 20px;
 
      font-family: Georama;
      font-style: normal;
@@ -126,7 +133,13 @@
      height: 600px;
  }
 
- .botao-saibaMais {
+ #foguete:active {
+     position: relative;
+     top: 4px;
+ }
+
+ .botao-saiba-mais {
+     margin-top: 30px;
      display: inline-block;
      box-shadow: 0px 2px 35px 0px #ff5500;
      background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
@@ -143,12 +156,12 @@
      text-decoration: none;
  }
 
- .botao-saibaMais:hover {
+ .botao-saiba-mais:hover {
      background: linear-gradient(to bottom, #ff5500 5%, #ff5500 100%);
      background-color: #ff5500;
  }
 
- .botao-saibaMais:active {
+ .botao-saiba-mais:active {
      position: relative;
      top: 1px;
  }
