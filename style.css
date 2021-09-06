@@ -48,12 +48,6 @@
  ----------------------------------
  */
 
-
-
-
-
-/* navbar teste */
-
 .navbar-responsive {
     color: #fff;
     position: absolute;
@@ -270,107 +264,6 @@
       transform: translate3d(-100%, 0, 0) !important;
     }
   }
-  
- /* fim navbar teste */
-
-/* 
- .navbar {
-     position: sticky;
-     z-index: 10000;
-     width: 100%;
-     height: 70px;
-     left: 0px;
-     top: 0px;
-
-     background: var(--nav-bg);
-     box-shadow: 0px 2px 35px var(--nav-bg);
- }
-
- .navbar-brand {
-     color: var(--nav-text-color);
-     width: 172px;
-     left: 179px;
-
-
-     font-family: Georama-Italico;
-     font-size: 40px;
-     font-weight: 500;
-     line-height: 48px;
-
-     border: 1px solid transparent;
- }
-
- a:hover {
-     color: var(--nav-text-color);
- }
-
- li .nav-link {
-    font-family: Georama-Regular;
-
-     font-weight: 500;
-     font-size: 20px;
-
-     color: var(--nav-text-color);
-
-     border: 3px solid var(--nav-text-color);
-     border-radius: 50px;
- }
-
- li .nav-link:hover {
-     color: var(--nav-hover);
-     text-decoration: none;
-     background-color: var(--nav-text-color);
-     border: 3px solid var(--nav-text-color);
-     border-radius: 50px;
- }
-
- .nav-link:focus {
-     color: var(--text-color);
- }
-
- .nav-link:active {
-     position: relative;
-     top: 1px;
- }
-
- .nav-item {
-     margin-left: 20px;
- }
-
- .navbar-toggler {
-     font-weight: 500;
-     font-size: 25px;
-
-     color: var(--nav-text-color);
-
-     border-radius: 50px;
- }
-
- .darkmode-icon {
-     cursor: pointer;
-     display: flex;
-
-     font-size: 30px;
-     margin-right: 30px;
-     color: var(--text-color);
-
-     border: 3px solid var(--text-color);
-     border-radius: 40%;
-
-     padding: 10px;
- }
-
- .darkmode-icon:hover {
-     color: var(--nav-hover);
-     background-color: var(--text-color);
-
-     border: 3px solid var(--text-color);
- }
-
- #switch {
-     opacity: 0;
-     position: absolute;
- } */
 
    /*  
  ----------------------------------
@@ -569,7 +462,3 @@
     TENTANDO FAZER A TAL DA RESPONSIVIDADE
  ----------------------------------
  */
-
-@media (max-width) {
-    
-}
