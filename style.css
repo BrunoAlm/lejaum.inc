@@ -74,19 +74,7 @@
      color: var(--nav-text-color);
  }
 
-
-
- /* @media (min-width: 992px) {
-     .navbar-expand-lg .navbar-nav .nav-link {
-         padding-top: 0;
-         padding-bottom: 0;
-         padding-right: 1rem;
-         padding-left: 1rem;
-     }
- } */
-
  li .nav-link {
-     font-family: Georama-Regular;
      font-weight: 500;
      font-size: 20px;
 
@@ -118,7 +106,6 @@
  }
 
  .navbar-toggler {
-     font-family: Georama-Regular;
      font-weight: 500;
      font-size: 25px;
 
@@ -168,7 +155,6 @@
 
  .titulo {
      color: var(--nav-bg);
-     font-family: Georama-Regular;
      font-weight: 500;
      font-size: 55px;
      text-decoration: line-through;
@@ -177,7 +163,6 @@
  .titulo2 {
      margin-top: -30px;
      color: var(--nav-bg);
-     font-family: Georama-Regular;
      font-weight: 900;
      font-size: 55px;
  }
@@ -187,14 +172,11 @@
 
      margin-top: 20px;
 
-     font-family: Georama-Regular;
      font-style: normal;
      font-weight: 500;
      font-size: 27.5px;
      letter-spacing: 1px;
  }
-
-
 
  .btn-saibamais {
      margin-top: 30px;
@@ -209,7 +191,6 @@
      cursor: pointer;
 
      color: var(--nav-text-color);
-     font-family: Georama-Regular;
      font-style: normal;
      font-weight: normal;
      font-size: 25px;
