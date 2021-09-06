@@ -1,5 +1,5 @@
  @font-face {
-     font-family: Georama;
+     font-family: Georama-Regular;
      src: url(fonts/Georama/Georama-Regular.ttf);
      font-family: Georama-Italico;
      src: url(fonts/Georama/Georama-Italic.ttf);
@@ -85,7 +85,7 @@
  } */
 
  li .nav-link {
-     font-family: Georama;
+     font-family: Georama-Regular;
      font-weight: 500;
      font-size: 20px;
 
