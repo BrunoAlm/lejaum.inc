@@ -1,3 +1,4 @@
 # lejaum Inc.
-
-+ landing page
++ landing page pessoal do jão
+### Deploy
++ https://brunoalm.github.io/lejaum.inc/
