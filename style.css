@@ -37,7 +37,6 @@
  }
 
  body {
-     font-family: Georama-Regular;
      max-width: 100%;
      overflow-x: hidden;
  }
@@ -75,6 +74,8 @@
  }
 
  li .nav-link {
+    font-family: Georama-Regular;
+
      font-weight: 500;
      font-size: 20px;
 
@@ -150,10 +151,13 @@
  }
 
  .primeira-tela .titulo {
+
      margin-top: 98px;
  }
 
  .titulo {
+    font-family: Georama-Regular;
+
      color: var(--nav-bg);
      font-weight: 500;
      font-size: 55px;
@@ -161,6 +165,8 @@
  }
 
  .titulo2 {
+    font-family: Georama-Regular;
+
      margin-top: -30px;
      color: var(--nav-bg);
      font-weight: 900;
@@ -168,6 +174,8 @@
  }
 
  .subtitulo {
+    font-family: Georama-Regular;
+
      color: var(--text-color);
 
      margin-top: 20px;
@@ -218,8 +226,11 @@
      display: flex;
      margin-left: 600px;
  }
+ 
+/*  */
+/* ANIMAÇÃO COM SCROLL DO FOGUETE */
+/*  */
 
- /* TESTE DE ANIMAÇÃO COM SCROLL DO FOGUETE */
  .gira {
      animation: rotate 0.5s linear infinite;
      animation-play-state: paused;
@@ -250,6 +261,10 @@
      }
  }
 
+ /*  */
+ /* FIM */
+ /*  */
+
  /* ---------------------------- */
  /* SEGUNDA TELA */
  /* ---------------------------- */
@@ -259,12 +274,9 @@
      background-color: var(--segunda-tela-bg);
  }
 
- .segunda-tela .btn-saibamais {
-     margin-bottom: 100px;
- }
-
  .subtitulo-bold {
      color: var(--text-color);
+
 
      margin-top: 20px;
 
