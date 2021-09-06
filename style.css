@@ -234,8 +234,7 @@
  .posicao-foguete {
      position: absolute;
      display: flex;
-     justify-content: end;
-     margin-left: 750px;
+     margin-left: 600px;
  }
 
  /* TESTE DE ANIMAÇÃO COM SCROLL DO FOGUETE */
