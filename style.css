@@ -314,7 +314,7 @@
 
    .foguete,
    .grafico {
-     display: none;
+     display: none !important;
    }
 
    .primeira-tela .titulo,
