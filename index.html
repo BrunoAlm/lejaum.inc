@@ -23,23 +23,42 @@
                 <nav class="navbar__menu"><a class="navbar__brand" href="#">lejaum<img src="#" alt="" /></a>
                     <div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
                     <ul class="navbar__nav">
-                        <li class="navbar__link after-transform"><a class="active" href="#">Inicio</a></li>
-                        <li class="navbar__link after-transform"><a href="#">Nosotros</a></li>
-                        <li class="navbar__link after-transform"><a href="#">Galeria</a></li>
-                        <li class="navbar__link after-transform"><a href="#">Blog</a></li>
-                        <li class="navbar__link after-transform"><a href="#">Contacto</a></li>
+                        <li class="navbar__link after-transform"><a class="active" href="#">Início</a></li>
+                        <li class="navbar__link after-transform"><a href="#">Soluções</a></li>
+                        <li class="navbar__link after-transform"><a href="#">Portfólio</a></li>
+                        <li class="navbar__link after-transform"><a href="#">FAQ</a></li>
+                        <li class="navbar__link after-transform"><a href="#">Contato</a></li>
+                        <label class="darkmode-icon" for="switch">
+                            <input type="checkbox" id="switch" class="invisible" style="position: absolute;"><i
+                                class="fa fa-sun-o" id="mode-icon"></i>
+                        </label>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="navbar-responsive">
             <ul class="navbar-responsive__nav">
-                <li class="navbar-responsive__link after-transform"><a class="active" href="#">Inicio</a></li>
-                <li class="navbar-responsive__link after-transform"><a href="#">Nosotros</a></li>
-                <li class="navbar-responsive__link after-transform"><a href="#">Galeria</a></li>
-                <li class="navbar-responsive__link after-transform"><a href="#">Blog</a></li>
-                <li class="navbar-responsive__link after-transform"><a href="#">Contacto</a></li>
+                <li class="navbar-responsive__link after-transform"> <a href="#inicio">
+                        <button>Início</button>
+                    </a></li>
+                <li class="navbar-responsive__link after-transform"> <a href="#solucoes">
+                        <button>Soluções</button>
+                    </a></li>
+                <li class="navbar-responsive__link after-transform"> <a href="#inicio">
+                        <button>Portfólio</button>
+                    </a></li>
+                <li class="navbar-responsive__link after-transform"> <a href="#inicio">
+                        <button>FAQ</button>
+                    </a></li>
+                <li class="navbar-responsive__link after-transform"> <a href="#inicio">
+                        <button>Contato</button>
+                    </a></li>
+                <label class="darkmode-icon" for="switch">
+                    <input type="checkbox" id="switch" class="invisible" style="position: absolute;"><i
+                        class="fa fa-sun-o" id="mode-icon"></i>
+                </label>
             </ul>
+
         </div>
     </div>
     <!-- fim teste -->
@@ -47,7 +66,7 @@
     <!--  -->
     <!-- PRIMEIRA TELA -->
     <!--  -->
-    <div class="primeira-tela">
+    <div class="primeira-tela" id="inicio">
         <div class="container noselect">
             <div class="row">
                 <div class="col-8">
@@ -81,40 +100,38 @@
     <!--  -->
     <!-- SEGUNDA TELA -->
     <!--  -->
-    <div class="segunda-tela">
-        <div id="solucoes">
-            <div class="container noselect">
-                <div class="row">
-                    <div class="col-8">
-                        <h1 class="titulo2">Soluções</h1>
-                        <h2 class="subtitulo-bold">&emsp;Marketing</h2>
-                        <h2 class="conteudo">
-                            <strong>Análise</strong> <br>
-                            &emsp; Um dos pontos de partida é uma análise bem feita e em parceria com<br>
-                            os donos do negócio. E ao notarmos a necessidade da empresa, nós <br>
-                            desenvolvemos a estratégia de atuação e em quais canais a marca irá <br>
-                            aparecer; <br>
-                            &emsp; Planejamento é a chave mais importante para uma execução de <br>
-                            sucesso. <br>
-                        </h2>
-                        <h2 class="conteudo">
-                            <strong>Tráfego</strong> <br>
-                            &emsp; Nos primeiros passos práticos temos o *tráfego* que nada mais é que a <br>
-                            troca de verba por visibilidade, ou seja, comprar anúncios nos canais <br>
-                            escolhidos, tais como: Facebook, Instagram, Google, Youtube e entre outros;<br>
-                        </h2>
-                    </div>
+    <div class="segunda-tela" id="solucoes">
+        <div class="container noselect">
+            <div class="row">
+                <div class="col-8">
+                    <h1 class="titulo2">Soluções</h1>
+                    <h2 class="subtitulo-bold">&emsp;Marketing</h2>
+                    <h2 class="conteudo">
+                        <strong>Análise</strong> <br>
+                        &emsp; Um dos pontos de partida é uma análise bem feita e em parceria com<br>
+                        os donos do negócio. E ao notarmos a necessidade da empresa, nós <br>
+                        desenvolvemos a estratégia de atuação e em quais canais a marca irá <br>
+                        aparecer; <br>
+                        &emsp; Planejamento é a chave mais importante para uma execução de <br>
+                        sucesso. <br>
+                    </h2>
+                    <h2 class="conteudo">
+                        <strong>Tráfego</strong> <br>
+                        &emsp; Nos primeiros passos práticos temos o *tráfego* que nada mais é que a <br>
+                        troca de verba por visibilidade, ou seja, comprar anúncios nos canais <br>
+                        escolhidos, tais como: Facebook, Instagram, Google, Youtube e entre outros;<br>
+                    </h2>
                 </div>
-                <div class="posicao-grafico">
-                    <img class="grafico" src="images/grafico.png" alt="foguete" draggable="false">
-                </div>
-                <div class="espaco-em-baixo"></div>
             </div>
+            <div class="posicao-grafico">
+                <img class="grafico" src="images/grafico.png" alt="foguete" draggable="false">
+            </div>
+            <div class="espaco-em-baixo"></div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">

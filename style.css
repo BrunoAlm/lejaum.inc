@@ -1,5 +1,5 @@
  @font-face {
-   font-family: Georama-Regular;
+   font-family: Georama;
    src: url(fonts/Georama/Georama-Regular.ttf);
    font-family: Georama-Italico;
    src: url(fonts/Georama/Georama-Italic.ttf);
@@ -17,7 +17,7 @@
    --nav-text-color: #E5E5E5;
    --text-color: #E5E5E5;
    --nav-hover: #FF5400;
-
+   --drawer-color: #2c394bcc;
  }
 
  /* CORES NO MODO ESCURO */
@@ -25,7 +25,7 @@
    --primeira-tela-bg: #E5E5E5;
    --segunda-tela-bg: #F4F4F4;
    --text-color: #2C394B;
-   --mode-icon: "\f185";
+   --drawer-color: #b1b2b4c2;
  }
 
  .noselect {
@@ -37,7 +37,7 @@
  }
 
  body {
-   font-family: Georama-Regular;
+
    max-width: 100%;
    overflow-x: hidden;
  }
@@ -50,8 +50,8 @@
  */
 
  .navbar-responsive {
-   color: #fff;
-   position: absolute;
+   color: var(--text-color);
+   position: fixed;
    height: 100%;
    width: 100%;
    transform: translate3d(-100%, 0, 0);
@@ -61,6 +61,7 @@
  .navbar-responsive .navbar-responsive__nav {
    display: flex;
    flex-direction: column;
+   align-items: center;
    position: absolute;
    left: 50%;
    top: 50%;
@@ -69,22 +70,56 @@
  }
 
  .navbar-responsive .navbar-responsive__nav .navbar-responsive__link {
+   font-family: Georama;
+   font-weight: 600;
    text-align: center;
    letter-spacing: 2px;
  }
 
  .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a {
    display: block;
-   padding: 15px;
-   color: #fff;
+   padding: 10px;
+   color: var(--text-color);
    text-decoration: none;
+ }
+
+ .navbar-responsive .navbar-responsive__nav .navbar-responsive__link button {
+  box-shadow: 0px 2px 20px 0px var(--nav-bg);
+  background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
+  background-color: var(--nav-bg);
+  border-radius: 20px;
+  border: 0;
+
+  cursor: pointer;
+
+  color: var(--nav-text-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 9px 10px;
  }
 
  .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a:after {
    top: 50%;
    bottom: 0;
    left: 0;
-   background-color: #fff;
+   background-color: var(--text-color);
+ }
+
+ label {
+   font-size: 30px;
+ }
+ .navbar-responsive .navbar-responsive__nav .navbar-responsive__link .darkmode-icon {
+   cursor: pointer;
+   color: var(--text-color);
+   border: 3px solid var(--text-color);
+   border-radius: 40%;
+ }
+
+ .navbar-responsive .navbar-responsive__nav .navbar-responsive__link .darkmode-icon:hover {
+   color: var(--nav-hover);
+   background-color: var(--text-color);
+   border: 3px solid var(--text-color);
  }
 
  .navbar-responsive:after {
@@ -94,15 +129,17 @@
    position: absolute;
    height: 100%;
    width: 100%;
-   background-color: rgba(0, 0, 0, 0.8);
+   background-color: var(--drawer-color);
  }
 
  .navbar {
-   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
    background-color: var(--nav-bg);
-   position: absolute;
+   position: fixed;
    width: 100%;
    z-index: 1;
+
+   box-shadow: 0px 2px 35px var(--nav-bg);
+   background: var(--nav-bg);
  }
 
  .navbar .navbar__wrapper {
@@ -120,29 +157,59 @@
  .navbar .navbar__wrapper .navbar__menu .navbar__nav {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    list-style: none;
+   margin-bottom: 0px;
  }
 
  .navbar .navbar__wrapper .navbar__link a,
  .navbar__brand {
-   display: block;
    position: relative;
-   padding: 12px;
-   color: #777;
+   padding: 10px;
+
+   color: var(--nav-text-color);
+   font-family: Georama;
+   font-size: 1em;
+   font-weight: 500;
    letter-spacing: 0.1em;
    text-decoration: none;
+
+   border: 3px solid var(--nav-text-color);
+   border-radius: 50px;
+   margin-left: 10px;
  }
 
  .navbar .navbar__wrapper .navbar__brand {
    color: var(--nav-text-color);
    font-family: Georama-Italico;
-   font-weight: 700;
-   font-size: 2em;
+   font-weight: 500;
+   font-size: 2.3em;
    line-height: 48px;
+
+   border: none;
+   margin: 0px;
+ }
+
+ .navbar .navbar__wrapper .navbar__menu .navbar__nav .darkmode-icon {
+   cursor: pointer;
+   display: inline-flex;
+
+   font-size: 30px;
+   color: var(--text-color);
+   border: 3px solid var(--text-color);
+   border-radius: 40%;
+   padding: 5px;
+
+   margin-left: 45px;
+ }
+
+ .navbar .navbar__wrapper .navbar__menu .navbar__nav .darkmode-icon:hover {
+   color: var(--nav-hover);
+   background-color: var(--text-color);
+   border: 3px solid var(--text-color);
  }
 
  .navbar .navbar__wrapper .navbar__brand img {
-   color: #fff;
    height: 100%;
  }
 
@@ -168,7 +235,6 @@
  :hover :after {
    transform: scaleX(1) translateZ(0);
  }
-
 
  /* Icon 3 */
  #nav-icon3 {
@@ -245,6 +311,18 @@
  }
 
  @media (max-width: 600px) {
+
+   .foguete,
+   .grafico {
+     display: none;
+   }
+
+   .primeira-tela .titulo,
+   .primeira-tela .titulo2 {
+     font-size: 3em;
+     line-height: 1.2em;
+   }
+
    .navbar__nav {
      display: none !important;
    }
@@ -259,6 +337,8 @@
      transform: translate3d(-100%, 0, 0) !important;
    }
  }
+
+
 
  /*  
  ----------------------------------
@@ -281,7 +361,7 @@
  }
 
  .titulo {
-   font-family: Georama-Regular;
+   font-family: Georama;
 
    color: var(--nav-bg);
    font-weight: 500;
@@ -290,7 +370,7 @@
  }
 
  .titulo2 {
-   font-family: Georama-Regular;
+   font-family: Georama;
 
    margin-top: -30px;
    color: var(--nav-bg);
@@ -299,7 +379,7 @@
  }
 
  .subtitulo {
-   font-family: Georama-Regular;
+   font-family: Georama;
 
    color: var(--text-color);
 
@@ -401,7 +481,7 @@
  */
 
  .segunda-tela {
-   padding-top: 300px;
+   padding-top: 200px;
    background-color: var(--segunda-tela-bg);
  }
 
@@ -411,7 +491,7 @@
 
    margin-top: 20px;
 
-   font-family: Georama-Regular;
+   font-family: Georama;
    font-style: normal;
    font-weight: 700;
    font-size: 27.5px;
@@ -422,7 +502,7 @@
    color: var(--text-color);
 
    margin-top: 20px;
-   font-family: Georama-Regular;
+   font-family: Georama;
    font-style: normal;
    font-weight: 500;
    font-size: 20px;
