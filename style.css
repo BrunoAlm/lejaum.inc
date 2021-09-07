@@ -336,7 +336,6 @@
 
  .titulo {
    font-family: Georama;
-
    color: var(--nav-bg);
    font-weight: 500;
    font-size: 55px;
@@ -504,6 +503,124 @@
    padding-bottom: 150px;
  }
 
+ /*  
+ ----------------------------------
+    TERCEIRA TELA
+ ----------------------------------
+ */
+
+ .terceira-tela {
+   padding-top: 50px;
+   background-color: var(--primeira-tela-bg);
+   height: 100vh;
+ }
+
+ .container-custom-carrossel {
+   margin-top: 150px;
+   margin-right: auto;
+   margin-left: 50px;
+   width: 80%;
+   display: flex;
+   align-items: center;
+   align-content: center;
+ }
+
+ .portfolio-carrossel {
+   width: 80%;
+   height: 500px;
+   position: absolute;
+   overflow: hidden;
+ }
+
+ .portfolio-carrossel .track {
+   border: 2px solid #f3213d6c;
+   border-radius: 10px;
+
+   position: absolute;
+   top: 150px;
+   display: inline-flex;
+   touch-action: none;
+ }
+
+ .portfolio-carrossel .track .card-custom {
+   margin: 20px 20px 20px 20px;
+ }
+
+ .card-custom .card-image {
+   display: flex;
+   align-items: flex-end;
+   width: 200px;
+   height: 300px;
+ }
+
+ .card-custom .card-image img {
+   width: 200px;
+   height: 300px;
+ }
+
+ .card-custom .card-image .filtro {
+   position: absolute;
+   margin: 5px;
+   height: 115px;
+   width: 190px;
+ }
+
+ .card-custom .card-image .filtro .info-card {
+   display: none;
+ }
+
+ .card-custom:hover .card-image .filtro .info-card {
+   display: block;
+   padding: 15px 15px 0 20px;
+ }
+
+ .card-custom .card-image .filtro .info-card .titulo-card {
+   font-family: Georama;
+   font-size: 16px;
+   font-weight: 900;
+ }
+
+ .card-custom .card-image .filtro .info-card .conteudo-card {
+   font-family: Georama;
+   font-size: 12px;
+   font-weight: 400;
+ }
+
+ .card-custom .card-image .filtro .info-card button {
+   box-shadow: 0px 2px 10px var(--nav-bg), 0px 1px 5px black;
+   background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
+   background-color: var(--nav-bg);
+   border-radius: 42px;
+   border: 0;
+
+   cursor: pointer;
+   color: var(--nav-text-color);
+   font-style: normal;
+   font-weight: normal;
+   font-size: 15px;
+   padding: 2px 10px;
+   text-decoration: none;
+ }
+
+ .card-custom:hover .card-image .filtro {
+   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) -8.21%, rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(2px);
+
+   border-radius: 5%;
+
+   animation-name: aparece-devagar;
+   animation-duration: 1s;
+ }
+
+ @keyframes aparece-devagar {
+   from {
+     opacity: 0;
+   }
+
+   to {
+     opacity: 80;
+   }
+ }
 
  /*  
  ----------------------------------
