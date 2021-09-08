@@ -545,7 +545,6 @@
  }
 
  .portfolio-carrossel .track {
-   border: 2px solid #f3213d6c;
    border-radius: 10px;
 
    position: absolute;
@@ -599,7 +598,7 @@
        rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
 
    backdrop-filter: blur(4px);
-   border-radius: 20px;
+   border-radius: 15px;
    animation-name: aparece-devagar;
    animation-duration: 1s;
  }
