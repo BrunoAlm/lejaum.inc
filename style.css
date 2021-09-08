@@ -455,7 +455,7 @@
  .segunda-tela {
    padding-top: 50px;
    background-color: var(--segunda-tela-bg);
-   height: 100vh;
+   height: 50em;
  }
 
  .subtitulo-bold {
@@ -477,29 +477,12 @@
    font-family: Georama;
    font-style: normal;
    font-weight: 500;
-   font-size: 20px;
+   font-size: 15px;
    letter-spacing: 1.1px;
+   line-height: 1.2em;
  }
 
- .posicao-grafico {
-   position: absolute;
-   display: flex;
-   justify-content: end;
-
-   margin-left: 800px;
-   margin-top: -400px;
- }
-
- .grafico {
-   height: 450px;
- }
-
- .grafico:active {
-   position: relative;
-   top: 4px;
- }
-
- .espaco-em-baixo {
+ .segunda-tela .espaco-em-baixo {
    padding-bottom: 150px;
  }
 
@@ -510,8 +493,38 @@
  */
 
  .terceira-tela {
-   padding-top: 50px;
+   padding-top: 1px;
    background-color: var(--primeira-tela-bg);
+   height: 600px;
+ }
+
+ .terceira-tela .posicao-grafico {
+   margin-left: 800px;
+   margin-top: -300px;
+ }
+
+ .terceira-tela .grafico {
+   height: 450px;
+ }
+
+ .terceira-tela .grafico:active {
+   position: relative;
+   top: 4px;
+ }
+
+ .terceira-tela .espaco-em-baixo {
+   padding-bottom: 150px;
+ }
+
+ /*  
+ ----------------------------------
+    QUARTA TELA
+ ----------------------------------
+ */
+
+ .quarta-tela {
+   padding-top: 50px;
+   background-color: var(--segunda-tela-bg);
    height: 100vh;
  }
 
@@ -602,6 +615,24 @@
    text-decoration: none;
  }
 
+ .card-custom:hover {
+   position: relative;
+   bottom: 10px;
+
+   animation-name: card-pula;
+   animation-duration: 0.2s;
+ }
+
+ @keyframes card-pula {
+   from {
+     bottom: 0px;
+   }
+
+   to {
+     bottom: 10px;
+   }
+ }
+
  .card-custom:hover .card-image .filtro {
    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) -8.21%, rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
    backdrop-filter: blur(2px);
@@ -646,21 +677,42 @@
 
    .titulo,
    .titulo2 {
-     font-size: 38px;
-     line-height: 1.2em;
+     font-size: 32px;
+     line-height: 1em;
+     letter-spacing: 1px;
    }
 
    .primeira-tela .subtitulo {
-     font-size: 20px;
+     font-size: 17px;
      line-height: 1em;
+     letter-spacing: 0.1px;
    }
 
-   .subtitulo-bold {
-     font-size: 20px;
+   .primeira-tela .btn-saibamais {
+    margin-top: 60px;
+    font-size: 18px;
+    padding: 7px 18px;
    }
 
-   .conteudo {
-     font-size: 15px;
+   .segunda-tela {
+     height: 42em;
+   }
+
+   .segunda-tela .subtitulo-bold {
+     font-size: 22px;
+     letter-spacing: 1.5px;
+   }
+
+   .segunda-tela .conteudo {
+     font-size: 12px;
+     letter-spacing: 0.2px;
+     line-height: 1.3em;
+   }
+
+   .terceira-tela .conteudo {
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    line-height: 1.3em;
    }
 
 
@@ -668,6 +720,10 @@
      display: block !important;
    }
  }
+
+ /*  FIM MOBILE */
+
+
 
  @media (min-width: 600px) {
    .navbar__responsive {
