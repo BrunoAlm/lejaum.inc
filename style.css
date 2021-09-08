@@ -525,23 +525,22 @@
  .quarta-tela {
    padding-top: 50px;
    background-color: var(--segunda-tela-bg);
-   height: 100vh;
+   height: 110vh;
+ }
+
+ .quarta-tela .titulo2 {
+   margin-bottom: 30px;
  }
 
  .container-custom-carrossel {
-   margin-top: 150px;
-   margin-right: auto;
-   margin-left: 50px;
-   width: 80%;
    display: flex;
-   align-items: center;
-   align-content: center;
+   justify-content: center;
  }
 
  .portfolio-carrossel {
-   width: 80%;
-   height: 500px;
-   position: absolute;
+   width: 90%;
+   height: 440px;
+   position: relative;
    overflow: hidden;
  }
 
@@ -550,7 +549,6 @@
    border-radius: 10px;
 
    position: absolute;
-   top: 150px;
    display: inline-flex;
    touch-action: none;
  }
@@ -562,57 +560,20 @@
  .card-custom .card-image {
    display: flex;
    align-items: flex-end;
-   width: 200px;
-   height: 300px;
+   width: 282.88px;
+   height: 345.6px;
  }
 
  .card-custom .card-image img {
-   width: 200px;
-   height: 300px;
+   width: 282.88px;
+   height: 345.6px;
  }
 
  .card-custom .card-image .filtro {
    position: absolute;
    margin: 5px;
-   height: 115px;
-   width: 190px;
- }
-
- .card-custom .card-image .filtro .info-card {
-   display: none;
- }
-
- .card-custom:hover .card-image .filtro .info-card {
-   display: block;
-   padding: 15px 15px 0 20px;
- }
-
- .card-custom .card-image .filtro .info-card .titulo-card {
-   font-family: Georama;
-   font-size: 16px;
-   font-weight: 900;
- }
-
- .card-custom .card-image .filtro .info-card .conteudo-card {
-   font-family: Georama;
-   font-size: 12px;
-   font-weight: 400;
- }
-
- .card-custom .card-image .filtro .info-card button {
-   box-shadow: 0px 2px 10px var(--nav-bg), 0px 1px 5px black;
-   background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
-   background-color: var(--nav-bg);
-   border-radius: 42px;
-   border: 0;
-
-   cursor: pointer;
-   color: var(--nav-text-color);
-   font-style: normal;
-   font-weight: normal;
-   font-size: 15px;
-   padding: 2px 10px;
-   text-decoration: none;
+   width: 272.88px;
+   height: 130px;
  }
 
  .card-custom:hover {
@@ -634,11 +595,11 @@
  }
 
  .card-custom:hover .card-image .filtro {
-   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) -8.21%, rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
-   backdrop-filter: blur(2px);
+   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) -8.21%,
+       rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
 
-   border-radius: 5%;
-
+   backdrop-filter: blur(4px);
+   border-radius: 20px;
    animation-name: aparece-devagar;
    animation-duration: 1s;
  }
@@ -652,6 +613,45 @@
      opacity: 80;
    }
  }
+
+ .card-custom .card-image .filtro .info-card {
+   display: none;
+ }
+
+ .card-custom:hover .card-image .filtro .info-card {
+   display: block;
+   padding: 15px 15px 0 20px;
+ }
+
+ .card-custom .card-image .filtro .info-card .titulo-card {
+   font-family: Georama;
+   font-size: 18px;
+   font-weight: 900;
+ }
+
+ .card-custom .card-image .filtro .info-card .conteudo-card {
+   font-family: Georama;
+   font-size: 14px;
+   font-weight: 400;
+ }
+
+ .card-custom .card-image .filtro .info-card button {
+   box-shadow: 0px 2px 10px var(--nav-bg), 0px 1px 5px black;
+   background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
+   background-color: var(--nav-bg);
+   border-radius: 42px;
+   border: 0;
+
+   cursor: pointer;
+   color: var(--nav-text-color);
+   font-style: normal;
+   font-weight: normal;
+   font-size: 15px;
+   padding: 2px 10px;
+   text-decoration: none;
+ }
+
+
 
  /*  
  ----------------------------------
@@ -689,9 +689,9 @@
    }
 
    .primeira-tela .btn-saibamais {
-    margin-top: 60px;
-    font-size: 18px;
-    padding: 7px 18px;
+     margin-top: 60px;
+     font-size: 18px;
+     padding: 7px 18px;
    }
 
    .segunda-tela {
@@ -710,9 +710,9 @@
    }
 
    .terceira-tela .conteudo {
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    line-height: 1.3em;
+     font-size: 12px;
+     letter-spacing: 0.2px;
+     line-height: 1.3em;
    }
 
 
