@@ -8,6 +8,11 @@
    src: url(fonts/Georama/Georama-Italic.ttf);
  }
 
+ @font-face {
+  font-family: Georama-ExtraBold;
+  src: url(fonts/Georama/Georama-ExtraBold.ttf);
+}
+
  * {
    font-family: Georama;
    margin: 0;
@@ -126,7 +131,7 @@
 
  .navbar-responsive:after {
    content: "";
-   z-index: -1;
+   z-index: 1;
    left: 0;
    position: absolute;
    height: 100%;
@@ -348,9 +353,7 @@
 
  .primeira-tela .titulo {
    padding-top: 98px;
- }
 
- .titulo {
    color: var(--nav-bg);
    font-weight: 500;
    font-size: 55px;
@@ -358,6 +361,7 @@
  }
 
  .titulo2 {
+   font-family: Georama-ExtraBold;
    color: var(--nav-bg);
    font-weight: 900;
    font-size: 55px;
