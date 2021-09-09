@@ -6,7 +6,9 @@
  }
 
  * {
+   font-family: Georama;
    margin: 0;
+   box-sizing: border-box;
  }
 
  /* CORES NO MODO CLARO */
@@ -37,7 +39,6 @@
  }
 
  body {
-
    max-width: 100%;
    overflow-x: hidden;
  }
@@ -131,6 +132,8 @@
  }
 
  .navbar {
+   display: flex;
+   align-items: center;
    background-color: var(--nav-bg);
    position: fixed;
    width: 100%;
@@ -163,20 +166,23 @@
 
  .navbar .navbar__wrapper .navbar__link a,
  .navbar__brand {
-   /* box-shadow: 0px 2px 35px var(--nav-bg), 0px 0px 2px black; */
    position: relative;
    padding: 2px 10px 2px 10px;
-
-   color: var(--nav-text-color);
-   font-family: Georama;
-   font-size: 1em;
-   font-weight: 500;
-   /* letter-spacing: 0.1em; */
-   text-decoration: none;
 
    border: 1px solid var(--nav-text-color);
    border-radius: 50px;
    margin-left: 20px;
+
+   color: var(--nav-text-color);
+   font-size: 1em;
+   font-weight: 500;
+   text-decoration: none;
+ }
+
+ .navbar .navbar__wrapper .navbar__link a:hover {
+   color: var(--nav-hover);
+   background-color: var(--text-color);
+   ;
  }
 
  .navbar .navbar__wrapper .navbar__brand {
@@ -184,11 +190,15 @@
    font-family: Georama-Italico;
    font-weight: 500;
    font-size: 2.3em;
-   /* line-height: 48px; */
 
    box-shadow: none;
    border: none;
    margin: 0px;
+ }
+
+ .navbar .navbar__wrapper .navbar__menu .navbar__nav #switch {
+   display: none;
+   position: absolute;
  }
 
  .navbar .navbar__wrapper .navbar__menu .navbar__nav .darkmode-icon {
@@ -313,8 +323,6 @@
    left: 50%;
  }
 
-
-
  /*  
  ----------------------------------
     PRIMEIRA TELA
@@ -330,12 +338,16 @@
    height: 100vh;
  }
 
+ .primeira-tela .container {
+   margin-left: 10vw;
+   margin-right: auto;
+ }
+
  .primeira-tela .titulo {
-   margin-top: 98px;
+   padding-top: 98px;
  }
 
  .titulo {
-   font-family: Georama;
    color: var(--nav-bg);
    font-weight: 500;
    font-size: 55px;
@@ -343,20 +355,15 @@
  }
 
  .titulo2 {
-   font-family: Georama;
-
    color: var(--nav-bg);
    font-weight: 900;
    font-size: 55px;
  }
 
  .subtitulo {
-   font-family: Georama;
-
-   color: var(--text-color);
-
    margin-top: 20px;
 
+   color: var(--text-color);
    font-style: normal;
    font-weight: 500;
    font-size: 27.5px;
@@ -367,7 +374,6 @@
    margin-top: 30px;
 
    box-shadow: 0px 2px 35px var(--nav-bg), 0px 2px 5px black;
-   /* box-shadow: 0px 2px 35px 0px var(--nav-bg); */
    background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
    background-color: var(--nav-bg);
    border-radius: 42px;
@@ -376,8 +382,6 @@
    cursor: pointer;
 
    color: var(--nav-text-color);
-   font-style: normal;
-   font-weight: normal;
    font-size: 20px;
    padding: 9px 23px;
    text-decoration: none;
@@ -389,7 +393,6 @@
  }
 
  .foguete {
-   margin-top: 700px;
    height: 600px;
  }
 
@@ -404,6 +407,37 @@
    margin-left: 600px;
  }
 
+ .primeira-tela .seta-dancante {
+   position: absolute;
+   right: 50%;
+   margin-top: 140px;
+ }
+
+ .primeira-tela .seta-dancante #down-arrow {
+   font-size: 2rem;
+   color: white;
+   position: absolute;
+   /* right: 50%; */
+   animation: bounce 1s cubic-bezier(.5, .05, 1, .5)infinite alternate;
+   transform-origin: right bottom;
+ }
+
+ @keyframes bounce {
+   from {
+     bottom: 60px;
+   }
+
+   to {
+     bottom: 80px;
+   }
+ }
+
+ /*  
+ ----------------------------------
+    FIM PRIMEIRA TELA
+ ----------------------------------
+ */
+
  /*  
  ----------------------------------
     ANIMAÇÃO COM SCROLL DO FOGUETE
@@ -411,7 +445,7 @@
  */
 
  .gira {
-   animation: rotate 0.2s linear infinite;
+   animation: rotate 0.1s linear infinite;
    animation-play-state: paused;
    animation-delay: calc(var(--scroll) * -1s);
 
@@ -455,27 +489,27 @@
  .segunda-tela {
    padding-top: 50px;
    background-color: var(--segunda-tela-bg);
-   height: 50em;
+   height: 1000px;
+ }
+
+ .segunda-tela .container {
+   margin-left: 10vw;
+   margin-right: auto;
  }
 
  .subtitulo-bold {
-   color: var(--text-color);
-
    margin-top: 20px;
 
-   font-family: Georama;
-   font-style: normal;
+   color: var(--text-color);
    font-weight: 700;
    font-size: 27.5px;
    letter-spacing: 1px;
  }
 
  .conteudo {
-   color: var(--text-color);
-
    margin-top: 20px;
-   font-family: Georama;
-   font-style: normal;
+
+   color: var(--text-color);
    font-weight: 500;
    font-size: 15px;
    letter-spacing: 1.1px;
@@ -488,6 +522,12 @@
 
  /*  
  ----------------------------------
+    FIM SEGUNDA TELA
+ ----------------------------------
+ */
+
+ /*  
+ ----------------------------------
     TERCEIRA TELA
  ----------------------------------
  */
@@ -495,7 +535,12 @@
  .terceira-tela {
    padding-top: 1px;
    background-color: var(--primeira-tela-bg);
-   height: 600px;
+   height: 1000px;
+ }
+
+ .terceira-tela .container {
+   margin-left: 10vw;
+   margin-right: auto;
  }
 
  .terceira-tela .posicao-grafico {
@@ -518,6 +563,12 @@
 
  /*  
  ----------------------------------
+    FIM TERCEIRA TELA
+ ----------------------------------
+ */
+
+ /*  
+ ----------------------------------
     QUARTA TELA
  ----------------------------------
  */
@@ -525,13 +576,188 @@
  .quarta-tela {
    padding-top: 50px;
    background-color: var(--segunda-tela-bg);
-   height: 110vh;
+   height: 1000px;
+ }
+
+ .quarta-tela .container {
+   margin-left: 10vw;
+   margin-right: auto;
  }
 
  .quarta-tela .titulo2 {
    margin-bottom: 30px;
  }
 
+ .carousel {
+   background: var(--segunda-tela-bg);
+ }
+
+ /* big buttons, no circle */
+ .flickity-prev-next-button {
+   width: 100px;
+   height: 100px;
+   background: transparent;
+ }
+
+ /* arrow color */
+ .flickity-prev-next-button .arrow {
+   fill: white;
+ }
+
+ .flickity-prev-next-button.no-svg {
+   color: white;
+ }
+
+ .flickity-prev-next-button:hover {
+   background: transparent;
+ }
+
+ /* hide disabled button */
+ .flickity-prev-next-button:disabled {
+   display: none;
+ }
+
+ /* white circles */
+ .flickity-page-dots .dot {
+   width: 12px;
+   height: 12px;
+   opacity: 1;
+   background: transparent;
+   border: 2px solid white;
+ }
+
+ /* fill-in selected dot */
+ .flickity-page-dots .dot.is-selected {
+   background: white;
+ }
+
+ .carousel-cell {
+   width: 282.88px;
+   height: 345.6px;
+   margin-top: 30px;
+   margin-right: 10px;
+   border-radius: 5px;
+   counter-increment: carousel-cell;
+   display: flex;
+   align-items: flex-end;
+ }
+
+ .carousel-cell.c1 {
+   background-image: url(images/card/chop.png);
+   background-size: cover;
+ }
+
+ .carousel-cell.c2 {
+   background-image: url(images/card/drink.png);
+   background-size: cover;
+ }
+
+ .carousel-cell.c3 {
+   background-image: url(images/card/ice-cream.png);
+   background-size: cover;
+ }
+
+ .carousel-cell.c4 {
+   background-image: url(images/card/pai.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
+
+ .carousel-cell.c5 {
+   background-image: url(images/card/ice-cream.png);
+   background-size: cover;
+ }
+
+ .carousel-cell .filtro {
+   /* position: absolute; */
+   margin: 5px;
+   width: 272.88px;
+   height: 130px;
+ }
+
+ .carousel-cell:hover {
+   position: relative;
+   bottom: 10px;
+   animation-name: card-pula;
+   animation-duration: 0.2s;
+ }
+
+ @keyframes card-pula {
+   from {
+     bottom: 0px;
+   }
+
+   to {
+     bottom: 10px;
+   }
+ }
+
+ .carousel-cell:hover .filtro {
+   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) -8.21%,
+       rgba(255, 255, 255, 0) 52.24%), rgba(255, 255, 255, 0.5);
+
+   backdrop-filter: blur(4px);
+   border-radius: 15px;
+   animation-name: aparece-devagar;
+   animation-duration: 1s;
+ }
+
+ @keyframes aparece-devagar {
+   from {
+     opacity: 0;
+   }
+
+   to {
+     opacity: 80;
+   }
+ }
+
+ .carousel-cell .filtro .info-card {
+   display: none;
+ }
+
+ .carousel-cell:hover .filtro .info-card {
+   display: block;
+   padding: 15px 15px 0 20px;
+ }
+
+ .carousel-cell .filtro .info-card .titulo-card {
+   font-family: Georama;
+   font-size: 18px;
+   font-weight: 900;
+ }
+
+ .carousel-cell .filtro .info-card .conteudo-card {
+   font-family: Georama;
+   font-size: 14px;
+   font-weight: 400;
+ }
+
+ .carousel-cell .filtro .info-card button {
+   box-shadow: 0px 2px 10px var(--nav-bg), 0px 1px 5px black;
+   background: linear-gradient(to bottom, var(--nav-bg), 5%, var(--nav-bg), 100%);
+   background-color: var(--nav-bg);
+   border-radius: 42px;
+   border: 0;
+
+   cursor: pointer;
+   color: var(--nav-text-color);
+   font-style: normal;
+   font-weight: normal;
+   font-size: 15px;
+   padding: 2px 10px;
+   text-decoration: none;
+ }
+
+ /*  
+ ----------------------------------
+    FIM QUARTA TELA
+ ----------------------------------
+ */
+
+
+
+ /* 
  .container-custom-carrossel {
    display: flex;
    justify-content: center;
@@ -648,7 +874,7 @@
    font-size: 15px;
    padding: 2px 10px;
    text-decoration: none;
- }
+ } */
 
 
 
@@ -694,7 +920,7 @@
    }
 
    .segunda-tela {
-     height: 42em;
+     height: 50rem;
    }
 
    .segunda-tela .subtitulo-bold {
@@ -714,6 +940,15 @@
      line-height: 1.3em;
    }
 
+   .quarta-tela .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .quarta-tela .flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+  }
 
    #nav-icon3 span {
      display: block !important;

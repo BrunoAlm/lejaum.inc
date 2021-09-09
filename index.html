@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FLICKITY -->
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css" media="screen">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/e1e57eb12e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link do BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
     <!-- LINK DO ESTILO CUSTOM -->
     <link rel="stylesheet" href="style.css">
     <!-- FAVICON -->
@@ -54,8 +59,8 @@
                         <button>Contato</button>
                     </a></li>
                 <label class="darkmode-icon" for="switch">
-                    <input type="checkbox" id="switch" class="invisible" style="position: absolute;"><i
-                        class="fa fa-sun-o" id="mode-icon"></i>
+                    <input type="checkbox" id="switch">
+                    <i class="fa fa-sun-o" id="mode-icon"></i>
                 </label>
             </ul>
 
@@ -68,27 +73,28 @@
     <!--  -->
     <div class="primeira-tela" id="inicio">
         <div class="container noselect">
-            <div class="row">
-                <h1 class="titulo">NÃO VENDEMOS SERVIÇOS,</h1>
-                <h1 class="titulo2">NÓS ENTREGAMOS SOLUÇÕES!</h1>
-                <h2 class="subtitulo">
-                    Apareça no digital para a pessoa certa<br> e no momento certo.<br>
-                    <br>
-                    Seja reconhecido pelo seus clientes e fidelize eles.<br>
-                    <br>
-                    Transformamos Leads em Vendas.<br>
-                    <br>
-                    Nós somos a solução pra você e sua empresa!<br>
-                    <br>
-                </h2>
-                <a href="#">
-                    <button class="btn-saibamais"><i class="fa fa-arrow-circle-down"></i> Saber Mais</button>
-                </a>
-                <div class="posicao-foguete">
-                    <div class="sobe">
-                        <img class="foguete gira" src="images/foguetin.png" alt="foguete" draggable="false">
-                    </div>
+            <h1 class="titulo">NÃO VENDEMOS SERVIÇOS,</h1>
+            <h1 class="titulo2">NÓS ENTREGAMOS SOLUÇÕES!</h1>
+            <h2 class="subtitulo">
+                Apareça no digital para a pessoa certa<br> e no momento certo.<br>
+                <br>
+                Seja reconhecido pelo seus clientes e fidelize eles.<br>
+                <br>
+                Transformamos Leads em Vendas.<br>
+                <br>
+                Nós somos a solução pra você e sua empresa!<br>
+                <br>
+            </h2>
+            <a href="#">
+                <button class="btn-saibamais"> Saber Mais</button>
+            </a>
+            <div class="posicao-foguete">
+                <div class="sobe">
+                    <img class="foguete gira" src="images/foguetin.png" alt="foguete" draggable="false">
                 </div>
+            </div>
+            <div class="seta-dancante">
+                <i id="down-arrow" class="fas fa-arrow-down"></i>
             </div>
         </div>
         <div id="solucoes"></div>
@@ -174,10 +180,56 @@
                 <h1 class="titulo2">Portfólio</h1>
             </div>
         </div>
-        <div class="container-custom-carrossel noselect">
-            
+        <!-- Flickity HTML init -->
+        <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "wrapAround": true}'>
+            <div class="carousel-cell c1">
+                <div class="filtro">
+                    <div class="info-card">
+                        <h2 class="titulo-card">Cafézumbra</h2>
+                        <p class="conteudo-card">Franquia Café Flor do Grão</p>
+                        <button>Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell c2">
+                <div class="filtro">
+                    <div class="info-card">
+                        <h2 class="titulo-card">coisa1</h2>
+                        <p class="conteudo-card">Franquia Café Flor do Grão</p>
+                        <button>Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell c3">
+                <div class="filtro">
+                    <div class="info-card">
+                        <h2 class="titulo-card">coisa2</h2>
+                        <p class="conteudo-card">Franquia Café Flor do Grão</p>
+                        <button>Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell c4">
+                <div class="filtro">
+                    <div class="info-card">
+                        <h2 class="titulo-card">coisa3</h2>
+                        <p class="conteudo-card">Franquia Café Flor do Grão</p>
+                        <button>Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell c5">
+                <div class="filtro">
+                    <div class="info-card">
+                        <h2 class="titulo-card">coisa4</h2>
+                        <p class="conteudo-card">Franquia Café Flor do Grão</p>
+                        <button>Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-custom-carrossel noselect">
             <div class="portfolio-carrossel">
-                
                 <div class="track">
                     <div class="card-custom">
                         <div class="card-image">
@@ -253,12 +305,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="espaco-em-baixo"></div>
     </div>
-
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FLICKITY -->
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <!-- Script custom -->
     <script src="script.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
