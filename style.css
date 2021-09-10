@@ -9,9 +9,9 @@
  }
 
  @font-face {
-  font-family: Georama-ExtraBold;
-  src: url(fonts/Georama/Georama-ExtraBold.ttf);
-}
+   font-family: Georama-ExtraBold;
+   src: url(fonts/Georama/Georama-ExtraBold.ttf);
+ }
 
  * {
    font-family: Georama;
@@ -65,6 +65,7 @@
    width: 100%;
    transform: translate3d(-100%, 0, 0);
    transition: 0.3s all ease-in-out;
+   z-index: 1;
  }
 
  .navbar-responsive .navbar-responsive__nav {
@@ -83,6 +84,7 @@
    font-weight: 600;
    text-align: center;
    letter-spacing: 2px;
+   z-index: 2;
  }
 
  .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a {
@@ -98,7 +100,6 @@
    border: 0;
    box-shadow: 0px 2px 10px var(--nav-bg), 0px 2px 5px black;
    cursor: pointer;
-
    color: var(--nav-text-color);
    font-style: normal;
    font-weight: normal;
@@ -131,7 +132,6 @@
 
  .navbar-responsive:after {
    content: "";
-   z-index: 1;
    left: 0;
    position: absolute;
    height: 100%;
@@ -145,7 +145,7 @@
    background-color: var(--nav-bg);
    position: fixed;
    width: 100%;
-   z-index: 1;
+   z-index: 2;
 
    box-shadow: 0px 2px 35px var(--nav-bg), 0px 2px 5px black;
    background: var(--nav-bg);
@@ -344,6 +344,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    height: 100vh;
+   /* z-index: inherit; */
  }
 
  .primeira-tela .container {
@@ -420,10 +421,11 @@
    margin-top: 140px;
  }
 
- .primeira-tela .seta-dancante #down-arrow {
+ #down-arrow {
    font-size: 2rem;
    color: white;
    position: absolute;
+   /* z-index: -2; */
    /* right: 50%; */
    animation: bounce 1s cubic-bezier(.5, .05, 1, .5)infinite alternate;
    transform-origin: right bottom;
